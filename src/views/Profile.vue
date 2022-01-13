@@ -5,16 +5,14 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="white"
-        width="24px"
-        height="24px"
+        width="36px"
+        height="36px"
       >
         <path d="M0 0h24v24H0z" fill="none" />
         <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
       </svg>
 
-      <div>
-        <!-- <Carousel /> -->
-      </div>
+      <Carousel />
     </header>
 
     <section id="profile-details">
@@ -46,126 +44,25 @@
         </div>
       </div>
 
-      <div id="services">
-        <h3>Lista de Serviços</h3>
-
-        <div class="services-list">
-          <div id="service-card">
-            <div id="service-description">
-              <h4>Nome do Serviço</h4>
-              <p>R$ 29,90</p>
-            </div>
-
-            <div id="service-btn">
-              <div>Agendar</div>
-            </div>
-          </div>
-          <div id="service-card">
-            <div id="service-description">
-              <h4>Nome do Serviço</h4>
-              <p>R$ 29,90</p>
-            </div>
-
-            <div id="service-btn">
-              <div>Agendar</div>
-            </div>
-          </div>
-          <div id="service-card">
-            <div id="service-description">
-              <h4>Nome do Serviço</h4>
-              <p>R$ 29,90</p>
-            </div>
-
-            <div id="service-btn">
-              <div>Agendar</div>
-            </div>
-          </div>
-          <div id="service-card">
-            <div id="service-description">
-              <h4>Nome do Serviço</h4>
-              <p>R$ 29,90</p>
-            </div>
-
-            <div id="service-btn">
-              <div>Agendar</div>
-            </div>
-          </div>
-          <div id="service-card">
-            <div id="service-description">
-              <h4>Nome do Serviço</h4>
-              <p>R$ 29,90</p>
-            </div>
-
-            <div id="service-btn">
-              <div>Agendar</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="comments">
-        <h3>Comentários</h3>
-
-        <div class="comments-list">
-          <div id="comment-card">
-            <div id="comment-description">
-              <h4>Nome do Serviço</h4>
-              <p>R$ 29,90</p>
-            </div>
-
-            <div id="comment-btn">
-              <div>Agendar</div>
-            </div>
-          </div>
-          <div id="comment-card">
-            <div id="comment-description">
-              <h4>Nome do Serviço</h4>
-              <p>R$ 29,90</p>
-            </div>
-
-            <div id="comment-btn">
-              <div>Agendar</div>
-            </div>
-          </div>
-          <div id="comment-card">
-            <div id="comment-description">
-              <h4>Nome do Serviço</h4>
-              <p>R$ 29,90</p>
-            </div>
-
-            <div id="comment-btn">
-              <div>Agendar</div>
-            </div>
-          </div>
-          <div id="comment-card">
-            <div id="comment-description">
-              <h4>Nome do Serviço</h4>
-              <p>R$ 29,90</p>
-            </div>
-
-            <div id="comment-btn">
-              <div>Agendar</div>
-            </div>
-          </div>
-          <div id="comment-card">
-            <div id="comment-description">
-              <h4>Nome do Serviço</h4>
-              <p>R$ 29,90</p>
-            </div>
-
-            <div id="comment-btn">
-              <div>Agendar</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Services />
+      <Comments />
     </section>
   </section>
 </template>
 
 <script>
+import Services from '../components/Services.vue';
+import Comments from '../components/Comments.vue';
+import Carousel from '../components/Carousel.vue';
+
 export default {
   name: "Profile",
+
+  components: {
+    Services,
+    Comments,
+    Carousel
+  }
 };
 </script>
 
@@ -177,9 +74,13 @@ export default {
 }
 
 header {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   height: 30vh;
+}
+
+header svg {
+  position: absolute;
 }
 
 #profile-details {
@@ -201,8 +102,7 @@ header {
 
   display: flex;
   gap: 20px;
-  height: 100px;
-  margin-bottom: 10px;
+  height: 70px;
   width: 300px;
 }
 
@@ -231,81 +131,5 @@ header {
   position: relative;
   top: -25px;
   width: 50px;
-}
-
-#services {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.services-list {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  justify-items: center;
-}
-
-#service-card {
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-  align-items: center;
-  display: flex;
-  gap: 20px;
-  height: 100px;
-  margin-bottom: 10px;
-  padding: 10px 20px;
-  width: 300px;
-}
-
-#service-description {
-  padding-top: 10px;
-}
-
-#service-btn {
-  background: var(--dark-aqua);
-  color: var(--white);
-  border-radius: 8px;
-  height: 40px;
-  width: 100px;
-}
-
-#comments {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.comments-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-#comment-card {
-  background: var(--dark-aqua);
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-  align-items: center;
-  display: flex;
-  gap: 20px;
-  height: 100px;
-  margin-bottom: 10px;
-  padding: 10px 20px;
-  width: 100%;
-}
-
-#comment-description {
-  padding-top: 10px;
-}
-
-#comment-btn {
-  background: var(--dark-aqua);
-  color: var(--white);
-  border-radius: 8px;
-  height: 40px;
-  width: 100px;
 }
 </style>
