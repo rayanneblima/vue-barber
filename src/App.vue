@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div v-if="isLoading">
+    <SplashScreen :isLoading="isLoading" />
+  </div>
+
+  <router-view></router-view>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SplashScreen from './views/SplashScreen.vue';
 
 export default {
-  name: 'App',
+  name: "App",
+
   components: {
-    HelloWorld
+    SplashScreen
+  },
+
+  data () {
+    return {
+      isLoading: true
+    }
+  },
+
+  mounted () {
+    this.handleChangeLoading();
+  },
+
+  methods: {
+    handleChangeLoading () {
+      setTimeout(() => this.isLoading = false, 10000);
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import url('./styles/global.css');
 </style>

@@ -1,24 +1,31 @@
-# vue-barber
+## 🚀 Tecnologias
 
-## Project setup
-```
-npm install
-```
+- [HTML]
+- [CSS]
+- [JavaScript]
+- [Vue.JS]
+- [VueRouter]
+- [Vuex]
+- [Geolocation]
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 💻 Demo
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Acesse a demo do site através deste link:
 
-### Lints and fixes files
-```
-npm run lint
-```
+* [Clique aqui](https://rayanneblima.github.io/dev.finance-vuejs/)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 💻 Projeto
+
+Facilitando o agendamento de serviços com barbeiros 🪒
+
+* Código refatorado por mim para aplicação do **framework Vue.JS**
+*
+* Este é um projeto desenvolvido pelo **[Bonieky Lacerda](https://www.youtube.com/watch?v=kk_pGWBOkc4&ab_channel=BoniekyLacerda)**.
+
+## Dependências
+
+VueRouter to Vue.JS 3: `npm install vue-router@4` \
+Vuex: `npm install vuex --save` \
+
+---
+<p align="center">Desenvolvido com 💖 por Rayanne B. Lima</p>

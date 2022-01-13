@@ -1,0 +1,46 @@
+:root {
+  --aqua: #4EADBE;
+  --dark-aqua: #268596;
+  --white: #f3f3f3;
+
+  --primary-bg: #63C2D1;
+  --primary-text: #303030;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* 15px */
+  font-size: 93.75%;
+}
+
+body {
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: var(--primary-text);
+  text-decoration: none;
+  transition: all 0.6s;
+}
+
+a:hover {
+  color: var(--dark-aqua);
+}
+
+li {
+  list-style: none;
+}
+
+@media (min-width: 860px) {
+  html {
+    /* 14px */
+    font-size: 87.5%;
+  }
+}
