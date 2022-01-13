@@ -1,7 +1,10 @@
 :root {
+  --light-aqua: #83D6E3;
   --aqua: #4EADBE;
   --dark-aqua: #268596;
   --white: #f3f3f3;
+  --dark-gray: #7F7F7F;
+  --gray: #E7E7E7;
 
   --primary-bg: #63C2D1;
   --primary-text: #303030;
@@ -24,6 +27,17 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+::-webkit-scrollbar {
+  width:6px;
+  height:6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: var(--dark-aqua);
+  border-radius: 8px;
+}
+
+
 a {
   color: var(--primary-text);
   text-decoration: none;
@@ -36,6 +50,10 @@ a:hover {
 
 li {
   list-style: none;
+}
+
+#app {
+  min-height: 100vh;
 }
 
 @media (min-width: 860px) {

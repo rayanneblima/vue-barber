@@ -1,13 +1,43 @@
 <template>
-  <h1>UserAccount</h1>
+  <section id="user-account">
+    <header>
+      <div class="title">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+
+        <h2>Detalhes da Conta</h2>
+      </div>
+    </header>
+
+    <section id="card-list">
+
+    </section>
+  </section>
 </template>
 
 <script>
 export default {
-  name: "UserAccount"
+  name: "FavBarbersList"
 }
 </script>
 
-<style>
+<style scoped>
+#user-account {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+header {
+  align-items: center;
+  display: flex;
+}
+
+.title {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.title h2 {
+  color: var(--white);
+}
 </style>

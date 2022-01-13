@@ -1,8 +1,10 @@
 <template>
   <section id="home">
-    <HomeNavigation />
+    <div class="home__view">
+      <router-view></router-view>
+    </div>
 
-    <router-view></router-view>
+    <HomeNavigation />
   </section>
 </template>
 
@@ -21,9 +23,16 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
+}
+
+.home__view {
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  width: 100%;
 }
 </style>

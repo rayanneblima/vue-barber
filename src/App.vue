@@ -4,21 +4,28 @@
   </div>
 
   <router-view></router-view>
+
+  <div v-if="showBooking">
+    <BookingModal />
+  </div>
 </template>
 
 <script>
 import SplashScreen from './views/SplashScreen.vue';
+import BookingModal from './components/BookingModal.vue';
 
 export default {
   name: "App",
 
   components: {
-    SplashScreen
+    SplashScreen,
+    BookingModal
   },
 
   data () {
     return {
-      isLoading: true
+      isLoading: true,
+      showBooking: false
     }
   },
 
@@ -28,12 +35,8 @@ export default {
 
   methods: {
     handleChangeLoading () {
-      setTimeout(() => this.isLoading = false, 10000);
+      setTimeout(() => this.isLoading = false, 3000);
     }
   }
 }
 </script>
-
-<style>
-  @import url('./styles/global.css');
-</style>

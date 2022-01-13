@@ -4,13 +4,12 @@ import CreateAccount from '../views/CreateAccount';
 import Home from '../views/Home';
 import BarbersList from '../views/Home/BarbersList';
 import SearchBarber from '../views/Home/SearchBarber';
-import Booking from '../views/Home/Booking';
 import FavBarbersList from '../views/Home/FavBarbersList';
 import UserAccount from '../views/Home/UserAccount';
 
 const routes = [
   {
-    path: '/',
+    path: '/login',
     name: 'login',
     component: Login
   },
@@ -20,12 +19,12 @@ const routes = [
     component: CreateAccount
   },
   {
-    path: '/home',
+    path: '/',
     name: 'home',
     component: Home,
     children: [
       {
-        path: '',
+        path: 'home',
         name: 'barbers-list',
         component: BarbersList
       },
@@ -33,11 +32,6 @@ const routes = [
         path: 'pesquisa',
         name: 'search-barber',
         component: SearchBarber
-      },
-      {
-        path: 'agenda',
-        name: 'booking',
-        component: Booking
       },
       {
         path: 'favoritos',
