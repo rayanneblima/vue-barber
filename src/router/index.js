@@ -1,11 +1,14 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Login from '../views/Login';
 import CreateAccount from '../views/CreateAccount';
+
 import Home from '../views/Home';
 import BarbersList from '../views/Home/BarbersList';
 import SearchBarber from '../views/Home/SearchBarber';
 import FavBarbersList from '../views/Home/FavBarbersList';
 import UserAccount from '../views/Home/UserAccount';
+
+import Profile from '../views/Profile';
 
 const routes = [
   {
@@ -44,6 +47,11 @@ const routes = [
         component: UserAccount
       }
     ]
+  },
+  {
+    path: '/perfil/:id',
+    name: 'profile',
+    component: Profile
   },
 ];
 
