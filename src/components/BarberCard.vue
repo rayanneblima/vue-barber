@@ -6,15 +6,20 @@
 
     <div id="barber-description">
       <h4>Nome do Barbeiro</h4>
-      <div>Avaliação</div>
-      <button>Ver Perfil</button>
+      <Rating :grade="4.5" />
+      <Button text="Ver Perfil" dense outlined />
     </div>
   </div>
 </template>
 
 <script>
+import Button from './elements/Button.vue';
+import Rating from './elements/Rating.vue';
+
 export default {
   name: "BarberCard",
+
+  components: { Button, Rating },
 };
 </script>
 
@@ -38,5 +43,11 @@ export default {
   border-radius: 8px;
   height: 70px;
   width: 70px;
+}
+
+#barber-description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 </style>

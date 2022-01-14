@@ -1,7 +1,5 @@
 <template>
-  <button
-    @click.stop="$emit('click')"
-  >
+  <button @click.stop="$emit('click')" :class="{ dense, outlined }">
     {{ text }}
   </button>
 </template>
@@ -17,6 +15,18 @@ export default {
       default: "",
       required: true,
       type: String
+    },
+
+    dense: {
+      default: false,
+      required: false,
+      type: Boolean
+    },
+
+    outlined: {
+      default: false,
+      required: false,
+      type: Boolean
     }
   }
 }
@@ -32,11 +42,26 @@ button {
   height: 40px;
   padding: 0;
   text-transform: uppercase;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
   width: 100%;
 }
 
 button:hover {
   background: var(--aqua);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button.dense {
+  border-radius: 8px;
+  height: 20px;
+  max-width: 100px;
+  padding: 0 20px;
+  text-transform: none;
+}
+
+button.outlined {
+  background: transparent;
+  border: 2px solid var(--dark-aqua);
+  color: var(--dark-aqua);
 }
 </style>
