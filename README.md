@@ -12,7 +12,7 @@
 
 Acesse a demo do site através deste link:
 
-* [Clique aqui](https://rayanneblima.github.io/dev.finance-vuejs/)
+* [Clique aqui](https://rayanneblima.github.io/vue-barber/)
 
 ## 💻 Projeto
 
