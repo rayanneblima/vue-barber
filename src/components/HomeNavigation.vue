@@ -94,7 +94,7 @@ nav {
   background: var(--dark-aqua);
 
   bottom: 0;
-  height: 10vh;
+  min-height: 5vh;
   position: fixed;
   width: 100%;
 }
@@ -124,7 +124,8 @@ nav {
   height: 50px;
   justify-content: center;
   position: relative;
-  top: -5vh;
+  transform: translateY(-50%);
+  top: 50%;
   width: 50px;
 }
 </style>

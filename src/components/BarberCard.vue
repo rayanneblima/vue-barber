@@ -28,8 +28,9 @@ export default {
   gap: 20px;
   height: 100px;
   margin-bottom: 10px;
+  min-width: 280px;
   padding: 10px 20px;
-  width: 300px;
+  width: 100%;
 }
 
 #barber-img {

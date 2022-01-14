@@ -42,6 +42,7 @@ header {
 }
 
 .title {
+  align-items: center;
   display: inline-flex;
   justify-content: space-between;
 }

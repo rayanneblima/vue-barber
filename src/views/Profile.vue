@@ -103,7 +103,7 @@ header svg {
   display: flex;
   gap: 20px;
   height: 70px;
-  width: 300px;
+  width: 280px;
 }
 
 #profile-img {

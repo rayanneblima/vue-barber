@@ -30,7 +30,7 @@ export default {
 }
 
 .home__view {
-  max-height: 90vh;
+  max-height: 95vh;
   overflow-y: auto;
   padding: 20px;
   width: 100%;
