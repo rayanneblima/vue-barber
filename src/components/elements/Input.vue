@@ -49,7 +49,7 @@ export default {
 
     placeholder: {
       default: "",
-      required: true,
+      required: false,
       type: String,
     },
   },

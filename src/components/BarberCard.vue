@@ -7,14 +7,19 @@
     <div id="barber-description">
       <h4>Nome do Barbeiro</h4>
       <Rating :grade="4.5" />
-      <Button text="Ver Perfil" dense outlined />
+      <Button
+        text="Ver Perfil"
+        dense
+        outlined
+        @click="$router.push({ name: 'profile', params: { id: '1' } })"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import Button from './elements/Button.vue';
-import Rating from './elements/Rating.vue';
+import Button from "./elements/Button.vue";
+import Rating from "./elements/Rating.vue";
 
 export default {
   name: "BarberCard",

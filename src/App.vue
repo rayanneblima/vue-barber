@@ -5,7 +5,7 @@
 
   <router-view></router-view>
 
-  <div v-if="showBooking">
+  <div v-if="!showBooking">
     <BookingModal />
   </div>
 </template>

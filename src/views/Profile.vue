@@ -7,6 +7,7 @@
         fill="white"
         width="36px"
         height="36px"
+        @click="$router.back"
       >
         <path d="M0 0h24v24H0z" fill="none" />
         <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
@@ -24,7 +25,7 @@
 
           <div id="profile-description">
             <h4>Nome do Barbeiro</h4>
-            <div>Avaliação</div>
+            <Rating :grade="4.5" />
           </div>
         </div>
 
@@ -54,6 +55,7 @@
 import Services from '../components/Services.vue';
 import Comments from '../components/Comments.vue';
 import Carousel from '../components/Carousel.vue';
+import Rating from '../components/elements/Rating.vue';
 
 export default {
   name: "Profile",
@@ -61,7 +63,8 @@ export default {
   components: {
     Services,
     Comments,
-    Carousel
+    Carousel,
+    Rating
   }
 };
 </script>

@@ -5,6 +5,7 @@ import CreateAccount from '../views/CreateAccount';
 import Home from '../views/Home';
 import BarbersList from '../views/Home/BarbersList';
 import SearchBarber from '../views/Home/SearchBarber';
+import AppointmentsList from '../views/Home/AppointmentsList';
 import FavBarbersList from '../views/Home/FavBarbersList';
 import UserAccount from '../views/Home/UserAccount';
 
@@ -35,6 +36,11 @@ const routes = [
         path: 'pesquisa',
         name: 'search-barber',
         component: SearchBarber
+      },
+      {
+        path: 'agendamentos',
+        name: 'appointments-list',
+        component: AppointmentsList
       },
       {
         path: 'favoritos',

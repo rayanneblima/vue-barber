@@ -1,5 +1,5 @@
 <template>
-  <button @click.stop="$emit('click')" :class="{ dense, outlined }">
+  <button @click.stop="$emit('click')" :class="{ dense, outlined }" :style="style">
     {{ text }}
   </button>
 </template>
@@ -15,6 +15,12 @@ export default {
       default: "",
       required: true,
       type: String
+    },
+
+    style: {
+      default: () => ({}),
+      required: false,
+      type: Object
     },
 
     dense: {
@@ -40,6 +46,7 @@ button {
   color: var(--white);
   cursor: pointer;
   height: 40px;
+  max-width: 260px;
   padding: 0;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
